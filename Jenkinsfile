@@ -14,7 +14,7 @@ pipeline {
     choice(
       name: 'IMAGE_TAG',
       description: 'Name of Docker tag to push. Chose wisely.',
-      choices: ['latest', 'deploy-app-dev', 'deploy-mod-dev', 'deploy-app-test', 'deploy-mod-test'],
+      choices: genChoices(params.IMAGE_TAG, ['latest', 'deploy-app-dev', 'deploy-mod-dev', 'deploy-app-test', 'deploy-mod-test']),
     )
     string(
       name: 'IMAGE_NAME',
@@ -46,3 +46,14 @@ pipeline {
     always { sh 'docker image prune -f' }
   } // post
 } // pipeline
+
+/* Helper that generates list of available choices for a parameter
+ * but re-orders them based on the currently set value. First is default. */
+def List genChoices(String previousChoice, List defaultChoices) {
+  if (previousChoice == null) {
+     return defaultChoices
+  }
+  choices = defaultChoices.minus(previousChoice)
+  choices.add(0, previousChoice)
+  return choices
+}
