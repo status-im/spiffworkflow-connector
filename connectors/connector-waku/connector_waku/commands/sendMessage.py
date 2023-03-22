@@ -63,22 +63,25 @@ class SendMessage:
         """Execute."""
         responses = []
         all_calls_returned_200 = True
-        for rec in self.recipient:
-            # we also tried wakuext_sendContactRequest before wakuext_addContact.
-            # wakuext_sendContactRequest also took a third parameter after the rec parameter for the message that would appear
-            # alongside the contact request. But the message also appeared in your messages foreever and ever, which was not
-            # very compatible with sending a contact request with every message. Now, if you are not already a contact, you get
-            # a prompt to approve the request, and then you get all of the messages from the "spiff" user.
-            response, status_code = self.send_message('wakuext_addContact', rec)
-            if status_code == 200:
-                response, status_code = self.send_message(self.message_type, rec, self.message)
-            if status_code != 200:
-                all_calls_returned_200 = False
 
-            responses.append({
-                "response": response,
-                "status": status_code,
-            })
+        # FIXME: commented out so we can test without interferring with waku messages during UAT.
+        #   comment back in once that is done!!!!!!!!!!!!!!
+        # for rec in self.recipient:
+        #     # we also tried wakuext_sendContactRequest before wakuext_addContact.
+        #     # wakuext_sendContactRequest also took a third parameter after the rec parameter for the message that would appear
+        #     # alongside the contact request. But the message also appeared in your messages foreever and ever, which was not
+        #     # very compatible with sending a contact request with every message. Now, if you are not already a contact, you get
+        #     # a prompt to approve the request, and then you get all of the messages from the "spiff" user.
+        #     response, status_code = self.send_message('wakuext_addContact', rec)
+        #     if status_code == 200:
+        #         response, status_code = self.send_message(self.message_type, rec, self.message)
+        #     if status_code != 200:
+        #         all_calls_returned_200 = False
+        #
+        #     responses.append({
+        #         "response": response,
+        #         "status": status_code,
+        #     })
         return ({
             "response": json.dumps(responses),
             "node_returned_200": all_calls_returned_200,
