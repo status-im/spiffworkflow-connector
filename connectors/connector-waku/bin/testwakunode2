@@ -3,3 +3,6 @@
 # {"jsonrpc":"2.0","id":1,"result":null}
 
 curl http://wakunode2.spiffworkflow.org -XPOST -H 'content-type: application/json' -d '{"jsonrpc":"2.0","method":"wakuext_sendOneToOneMessage","params":[{"id": "zQ3shh9nNUbuLzjzvjgUwxAKb3HEDMrVrNzyTW1ZUrFgcLhxc", "message": "hello dude what is happening now thursday demo"}],"id":1}'
+
+# get public key from ens name
+curl http://localhost:8545 -XPOST -H 'content-type: application/json' -d '{"jsonrpc":"2.0","method":"ens_publicKeyOf","params":["1", "cammellos.eth"], "id":1}'
