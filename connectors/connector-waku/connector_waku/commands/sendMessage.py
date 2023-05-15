@@ -78,6 +78,9 @@ class SendMessage:
         responses = []
         all_calls_returned_200 = True
         for rec in self.recipient:
+            if not isinstance(rec, str):
+                continue
+            
             # we also tried wakuext_sendContactRequest before wakuext_addContact.
             # wakuext_sendContactRequest also took a third parameter after the rec parameter for the message that would appear
             # alongside the contact request. But the message also appeared in your messages foreever and ever, which was not
