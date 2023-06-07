@@ -48,9 +48,11 @@ class GetCurrencies:
         token_store = {}
         token_store_key = "token"
 
+        # NOTE: setting debug to True causes xero to cache the client when
+        # it's in a working state
         api_client = ApiClient(
             Configuration(
-                debug=True,
+                debug=False,
                 oauth2_token=OAuth2Token(
                     client_id=self.client_id, client_secret=self.client_secret
                 ),
