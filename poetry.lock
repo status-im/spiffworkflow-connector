@@ -258,6 +258,25 @@ type = "directory"
 url = "connectors/connector-bamboohr"
 
 [[package]]
+name = "connector-github"
+version = "0.2.0"
+description = "Make API Requests to github"
+category = "main"
+optional = false
+python-versions = "^3.9"
+files = []
+develop = false
+
+[package.dependencies]
+requests = "^2.28.2"
+
+[package.source]
+type = "git"
+url = "https://github.com/sartography/connector-github.git"
+reference = "HEAD"
+resolved_reference = "5d16c06abc48437abb9ed20afc882804635f8082"
+
+[[package]]
 name = "connector-http"
 version = "0.2.0"
 description = "Make HTTP Requests available to SpiffWorkflow Service Tasks"
@@ -1755,4 +1774,4 @@ urllib3 = "*"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "d6c6f9ac5f94be8bc88bb5867fabd07e174cfdc4f68f1af0bf420fba11af3e3a"
+content-hash = "e818f41fcbce7815e5ae1c8dca0f3133ba13d6d7f4b6d3c8ff90640c5dbe8923"
