@@ -10,9 +10,8 @@ class ConnectionConfig:
         self.password = password
 
 class BaseCommand:
-    """BaseCommand."""
-
     def _execute(self, sql, conn_str, handler):
+        conn = None
         try:
             conn = psycopg2.connect(conn_str)
             with conn.cursor() as cursor:
@@ -27,7 +26,8 @@ class BaseCommand:
             status = 500
             response = f'{"error": "Error executing sql statement: {e}"}'
         finally:
-            conn.close()
+            if conn is not None:
+                conn.close()
 
         return {"response": response, "status": status, "mimetype": "application/json"}
 
