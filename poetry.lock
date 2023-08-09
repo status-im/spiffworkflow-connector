@@ -246,7 +246,7 @@ version = "0.1.0"
 description = ""
 category = "main"
 optional = false
-python-versions = "^3.10"
+python-versions = "^3.11"
 files = []
 develop = true
 
@@ -313,12 +313,28 @@ type = "directory"
 url = "connectors/connector-postgresql"
 
 [[package]]
+name = "connector-smtp"
+version = "0.1.0"
+description = "Make SMTP Requests available to SpiffWorkflow Service Tasks"
+category = "main"
+optional = false
+python-versions = "^3.9"
+files = []
+develop = false
+
+[package.source]
+type = "git"
+url = "git@github.com:sartography/connector-smtp.git"
+reference = "HEAD"
+resolved_reference = "532e44b7a4acbb861fa9248398ed73302d49432e"
+
+[[package]]
 name = "connector-waku"
 version = "0.1.0"
 description = ""
 category = "main"
 optional = false
-python-versions = "^3.10"
+python-versions = "^3.11"
 files = []
 develop = true
 
@@ -335,7 +351,7 @@ version = "0.1.0"
 description = ""
 category = "main"
 optional = false
-python-versions = "^3.10"
+python-versions = "^3.11"
 files = []
 develop = true
 
@@ -1774,4 +1790,4 @@ urllib3 = "*"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "e818f41fcbce7815e5ae1c8dca0f3133ba13d6d7f4b6d3c8ff90640c5dbe8923"
+content-hash = "cd32af616e7742d7a11a6f56a253d8fcc0f925e585caddf6406ddf2c4327a9d8"
