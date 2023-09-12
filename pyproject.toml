@@ -15,6 +15,7 @@ connector-postgresql = {develop=true, path="connectors/connector-postgresql"}
 connector-aws = { git = "https://github.com/sartography/connector-aws.git"}
 connector-http = { git = "https://github.com/sartography/connector-http.git"}
 connector-github = { git = "https://github.com/sartography/connector-github.git"}
+connector-smtp = { git = "git@github.com:sartography/connector-smtp.git" }
 
 gunicorn = "^20.1.0"
 Flask-OAuthlib = "^0.9.6"
