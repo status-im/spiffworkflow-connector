@@ -9,6 +9,10 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 RUN useradd _gunicorn --no-create-home --user-group
 
+RUN apt-get update -q \
+ && apt-get install -y -q \
+        postgresql-client
+
 WORKDIR /app
 
 FROM base AS setup
