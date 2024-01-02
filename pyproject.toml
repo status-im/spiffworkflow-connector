@@ -12,11 +12,11 @@ connector-xero = {develop=true, path="connectors/connector-xero"}
 connector-bamboohr = {develop=true, path="connectors/connector-bamboohr"}
 connector-waku = {develop=true, path="connectors/connector-waku"}
 connector-postgresql = {develop=true, path="connectors/connector-postgresql"}
-connector-postgres-v2 = { git = "https://github.com/sartography/connector-postgres.git"}
 connector-aws = { git = "https://github.com/sartography/connector-aws.git"}
 connector-http = { git = "https://github.com/sartography/connector-http.git"}
 connector-github = { git = "https://github.com/sartography/connector-github.git"}
 connector-smtp = { git = "https://github.com/sartography/connector-smtp.git" }
+connector-postgres-v2 = { git = "https://github.com/sartography/connector-postgres.git"}
 
 gunicorn = "^20.1.0"
 Flask-OAuthlib = "^0.9.6"
