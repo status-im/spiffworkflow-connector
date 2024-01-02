@@ -296,6 +296,26 @@ reference = "HEAD"
 resolved_reference = "c660809302a9c42c4e1562ca8feec1f7c7df1f3f"
 
 [[package]]
+name = "connector-postgres-v2"
+version = "1.0.0"
+description = "Make HTTP Requests available to SpiffWorkflow Service Tasks"
+category = "main"
+optional = false
+python-versions = "^3.9"
+files = []
+develop = false
+
+[package.dependencies]
+requests = "^2.28.2"
+spiffworkflow-connector-command = {git = "https://github.com/sartography/spiffworkflow-connector-command.git", rev = "main"}
+
+[package.source]
+type = "git"
+url = "https://github.com/sartography/connector-postgres.git"
+reference = "HEAD"
+resolved_reference = "851001e70b9bf692addf9306d9342fc333653088"
+
+[[package]]
 name = "connector-postgresql"
 version = "0.1.0"
 description = ""
@@ -1555,8 +1575,28 @@ lint = ["docutils-stubs", "flake8", "mypy"]
 test = ["pytest"]
 
 [[package]]
+name = "spiffworkflow-connector-command"
+version = "0.2.0"
+description = "Make HTTP Requests available to SpiffWorkflow Service Tasks"
+category = "main"
+optional = false
+python-versions = "^3.9"
+files = []
+develop = false
+
+[package.dependencies]
+requests = "^2.28.2"
+typing-extensions = "^4.8.0"
+
+[package.source]
+type = "git"
+url = "https://github.com/sartography/spiffworkflow-connector-command.git"
+reference = "main"
+resolved_reference = "7e20603849ee609267ddc97c8433077e09ccd124"
+
+[[package]]
 name = "spiffworkflow-proxy"
-version = "0.1.0"
+version = "1.0.0"
 description = "A blueprint that can allow (and limit) SpiffWorkflow's Service Tasks access to an organizations API's, such as connections to AWS Services and existing applications."
 category = "main"
 optional = false
@@ -1567,12 +1607,13 @@ develop = false
 [package.dependencies]
 Flask = "^2.2"
 Flask-OAuthlib = "^0.9.6"
+spiffworkflow-connector-command = {git = "https://github.com/sartography/spiffworkflow-connector-command.git", rev = "main"}
 
 [package.source]
 type = "git"
 url = "https://github.com/sartography/spiffworkflow-proxy"
 reference = "HEAD"
-resolved_reference = "6cb2bbea923946cb2db3bf571a4ce28c776434b9"
+resolved_reference = "d64ae29fcc911fefc1a6209bab76948e5e25f627"
 
 [[package]]
 name = "stevedore"
@@ -1679,14 +1720,14 @@ files = [
 
 [[package]]
 name = "typing-extensions"
-version = "4.4.0"
-description = "Backported and Experimental Type Hints for Python 3.7+"
-category = "dev"
+version = "4.9.0"
+description = "Backported and Experimental Type Hints for Python 3.8+"
+category = "main"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "typing_extensions-4.4.0-py3-none-any.whl", hash = "sha256:16fa4864408f655d35ec496218b85f79b3437c829e93320c7c9215ccfd92489e"},
-    {file = "typing_extensions-4.4.0.tar.gz", hash = "sha256:1511434bb92bf8dd198c12b1cc812e800d4181cfcb867674e0f8279cc93087aa"},
+    {file = "typing_extensions-4.9.0-py3-none-any.whl", hash = "sha256:af72aea155e91adfc61c3ae9e0e342dbc0cba726d6cba4b6c72c1f34e47291cd"},
+    {file = "typing_extensions-4.9.0.tar.gz", hash = "sha256:23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"},
 ]
 
 [[package]]
@@ -1790,4 +1831,4 @@ urllib3 = "*"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "cd32af616e7742d7a11a6f56a253d8fcc0f925e585caddf6406ddf2c4327a9d8"
+content-hash = "6ecda3765e2bef8276efb92f4b0c5a4adf2fd805a8941ad8e14d631b370a62cf"
