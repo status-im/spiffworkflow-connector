@@ -296,27 +296,7 @@ spiffworkflow-connector-command = {git = "https://github.com/sartography/spiffwo
 type = "git"
 url = "https://github.com/sartography/connector-postgres.git"
 reference = "HEAD"
-resolved_reference = "dc01e632e73b0bcdb55c38f8683152124f2c108b"
-
-[[package]]
-name = "connector-postgres-v2"
-version = "1.0.0"
-description = "Make HTTP Requests available to SpiffWorkflow Service Tasks"
-category = "main"
-optional = false
-python-versions = "^3.9"
-files = []
-develop = false
-
-[package.dependencies]
-requests = "^2.28.2"
-spiffworkflow-connector-command = {git = "https://github.com/sartography/spiffworkflow-connector-command.git", rev = "main"}
-
-[package.source]
-type = "git"
-url = "https://github.com/sartography/connector-postgres.git"
-reference = "HEAD"
-resolved_reference = "851001e70b9bf692addf9306d9342fc333653088"
+resolved_reference = "af95cbc52c326bc925e185009ea5888f3a5869be"
 
 [[package]]
 name = "connector-postgresql"
@@ -1653,7 +1633,6 @@ files = [
 name = "typing-extensions"
 version = "4.9.0"
 description = "Backported and Experimental Type Hints for Python 3.8+"
-category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
