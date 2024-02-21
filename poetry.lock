@@ -272,12 +272,13 @@ develop = false
 [package.dependencies]
 requests = "^2.28.2"
 spiffworkflow-connector-command = {git = "https://github.com/sartography/spiffworkflow-connector-command.git", rev = "main"}
+xmltodict = "^0.13.0"
 
 [package.source]
 type = "git"
 url = "https://github.com/sartography/connector-http.git"
 reference = "HEAD"
-resolved_reference = "026de90d01e1127b7944600818aa94dc53850518"
+resolved_reference = "31e76be874a22f4a998c0257af17d00f2a30be88"
 
 [[package]]
 name = "connector-postgres-v2"
@@ -1732,6 +1733,17 @@ files = [
 certifi = "*"
 python-dateutil = ">=2.7"
 urllib3 = "*"
+
+[[package]]
+name = "xmltodict"
+version = "0.13.0"
+description = "Makes working with XML feel like you are working with JSON"
+optional = false
+python-versions = ">=3.4"
+files = [
+    {file = "xmltodict-0.13.0-py2.py3-none-any.whl", hash = "sha256:aa89e8fd76320154a40d19a0df04a4695fb9dc5ba977cbb68ab3e4eb225e7852"},
+    {file = "xmltodict-0.13.0.tar.gz", hash = "sha256:341595a488e3e01a85a9d8911d8912fd922ede5fecc4dce437eb4b6c8d037e56"},
+]
 
 [metadata]
 lock-version = "2.0"
